@@ -1,0 +1,11 @@
+algoritmo "CalculoDiametro"
+
+var
+  diametro, pii: real
+
+inicio
+  pii <- 3.14
+  diametro <- 31.40 / pii
+  escreval("Diâmetro: ", diametro:0:2, " cm")
+
+fimalgoritmo
