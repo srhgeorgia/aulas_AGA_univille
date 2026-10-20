@@ -1,0 +1,16 @@
+algoritmo "FuncoesCaractere"
+
+var 
+  texto: caractere
+
+inicio
+  texto <- "Sarah"
+
+  escreval("Texto original: ", texto)
+  escreval("Cópia de parte do texto: ", copia(texto, 1, 3))
+  escreval("Quantidade de caracteres: ", compr(texto))
+  escreval("Texto em maiúsculas: ", maiusc(texto))
+  escreval("Texto em minúsculas: ", minusc(texto))
+  escreval("Posição de 'sa': ", pos("sa", texto))
+
+fimalgoritmo
