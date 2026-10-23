@@ -1,0 +1,80 @@
+
+/* Configurações gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #222222;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #f2f2f2;
+    padding: 20px 40px;
+    border-bottom: 1px solid #dddddd;
+}
+
+header h1 {
+    font-size: 28px;
+    margin: 15px 0 5px;
+}
+
+/* Conteúdo principal */
+main {
+    padding: 20px 40px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+/* Botão Home */
+.btn-home {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-home:hover {
+    background-color: #388E3C;
+}
+
+/* Lista de produtos */
+.lista-produtos {
+    padding-left: 25px;
+}
+
+.produto {
+    margin-bottom: 40px;
+    padding: 15px;
+}
+
+.produto img {
+    display: block;
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.produto h3 {
+    font-size: 18px;
+}
+
+.preco {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.produto a:not(.btn-home) {
+    color: #4a287d;
+}
+
+.produto a:hover {
+    color: #246bce;
+}
