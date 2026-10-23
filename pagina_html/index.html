@@ -3,16 +3,81 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Produtos e acessórios para TVs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Store | Página inicial</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Produtos e acessórios para TVs</h1>
 
-    <p>Conheça nossos produtos e acessórios para TVs.</p>
+    <header class="header-home">
+        <a href="index.html" class="logo">TV Store</a>
 
-    <ul>
-        <li><a href="tvs.html">TVs</a></li>
-        <li><a href="acessorios.html">Acessórios</a></li>
-    </ul>
+        <nav class="menu">
+            <a href="paginas/tvs.html" class="btn-menu">TVs</a>
+            <a href="paginas/acessorios.html" class="btn-menu">Acessórios</a>
+        </nav>
+    </header>
+
+    <main class="conteudo-home">
+
+        <section class="banner-home">
+            <h1>Tudo para sua experiência de TV</h1>
+
+            <p>
+                Encontre televisores e acessórios para deixar
+                seu entretenimento ainda melhor.
+            </p>
+
+            <a href="paginas/tvs.html" class="btn-destaque">
+                Explorar produtos
+            </a>
+        </section>
+
+        <section class="categorias-home">
+            <h2>Nossas categorias</h2>
+
+            <div class="grid-categorias">
+
+                <article class="card-categoria">
+                    <img
+                        src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=700&q=80"
+                        alt="Televisão"
+                    >
+
+                    <div class="card-conteudo">
+                        <h3>Televisores</h3>
+                        <p>Confira modelos de TVs para sua casa.</p>
+
+                        <a href="paginas/tvs.html" class="btn-card">
+                            Ver TVs
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card-categoria">
+                    <img
+                        src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=700&q=80"
+                        alt="Acessórios eletrônicos"
+                    >
+
+                    <div class="card-conteudo">
+                        <h3>Acessórios</h3>
+                        <p>Encontre suportes, cabos e outros acessórios.</p>
+
+                        <a href="paginas/acessorios.html" class="btn-card">
+                            Ver acessórios
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer-home">
+        <p>&copy; 2026 TV Store - Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 </html>

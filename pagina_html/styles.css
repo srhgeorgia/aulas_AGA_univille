@@ -1,140 +1,346 @@
 
-/* Configurações gerais */
+/* ==========================
+   CONFIGURAÇÕES GERAIS
+========================== */
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-    color: #222222;
+    font-family: Arial, sans-serif;
+    color: #222;
+    background-color: #fff;
 }
 
-/* Cabeçalho */
-header {
-    background-color: #f2f2f2;
+img {
+    max-width: 100%;
+}
+
+/* ==========================
+   HEADER DAS PÁGINAS
+========================== */
+
+.header-home,
+.header-pagina {
     padding: 20px 40px;
-    border-bottom: 1px solid #dddddd;
+    background-color: #20252d;
+    color: white;
 }
 
-header h1 {
-    font-size: 28px;
+.header-home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-pagina h1 {
     margin: 15px 0 5px;
+    font-size: 28px;
 }
 
-/* Botão Home */
+.logo {
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-menu,
 .btn-home {
     display: inline-block;
     padding: 10px 18px;
-    background-color: #4CAF50;
+    border: 1px solid #68717f;
+    border-radius: 6px;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
     font-weight: bold;
 }
 
+.btn-menu:hover,
 .btn-home:hover {
+    background-color: #414a58;
+}
+
+/* ==========================
+   HOME
+========================== */
+
+.conteudo-home {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.banner-home {
+    padding: 60px 30px;
+    text-align: center;
+    background-color: #eef3f8;
+    border-radius: 12px;
+}
+
+.banner-home h1 {
+    margin-top: 0;
+    font-size: 36px;
+    color: #20252d;
+}
+
+.banner-home p {
+    max-width: 600px;
+    margin: 20px auto;
+    line-height: 1.7;
+    color: #555;
+}
+
+.btn-destaque {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 13px 24px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.btn-destaque:hover {
     background-color: #388E3C;
 }
 
-/* Conteúdo principal */
-main {
-    padding: 20px 40px;
+.categorias-home {
+    margin-top: 40px;
 }
 
-main h2 {
-    font-size: 24px;
+.categorias-home h2 {
     margin-bottom: 25px;
+    font-size: 28px;
 }
 
-/* GRID dos produtos */
+/* Grid das categorias */
+
+.grid-categorias {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.card-categoria {
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.card-categoria img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.card-conteudo {
+    padding: 22px;
+}
+
+.card-conteudo h3 {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.card-conteudo p {
+    line-height: 1.6;
+    color: #555;
+}
+
+.btn-card {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    background-color: #20252d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn-card:hover {
+    background-color: #414a58;
+}
+
+/* ==========================
+   GRID DOS PRODUTOS
+========================== */
+
+main:not(.conteudo-home) {
+    padding: 25px 40px;
+}
+
 .lista-produtos {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 30px;
-
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 25px 0;
 }
 
-/* Cada produto */
 .produto {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
     padding: 20px;
-    border: 1px solid #dddddd;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    background-color: #ffffff;
+    background-color: white;
 }
 
-/* Imagens */
 .produto img {
+    display: block;
     width: 100%;
     height: 200px;
     object-fit: contain;
     margin-bottom: 15px;
 }
 
-/* Nome do produto */
 .produto h3 {
     font-size: 18px;
     margin: 10px 0;
 }
 
-/* Preço */
-.preco {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-/* Parcelamento */
 .produto p {
     line-height: 1.5;
 }
 
-/* Link de detalhes */
-.produto a {
-    color: #4a287d;
+.preco {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.produto > a {
     margin-top: auto;
     padding-top: 10px;
+    color: #4a287d;
 }
 
-.produto a:hover {
-    color: #246bce;
+/* ==========================
+   DETALHES DO PRODUTO
+========================== */
+
+.detalhes-container {
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-/* Tablets */
+.detalhes-produto {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 40px;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.detalhes-produto img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+}
+
+.detalhe-informacoes h2 {
+    font-size: 28px;
+    margin-top: 0;
+}
+
+.detalhe-informacoes p {
+    line-height: 1.7;
+}
+
+.detalhe-informacoes .preco {
+    font-size: 24px;
+}
+
+/* ==========================
+   RODAPÉ
+========================== */
+
+.footer-home {
+    padding: 20px;
+    text-align: center;
+    background-color: #20252d;
+    color: white;
+}
+
+.footer-home p {
+    margin: 0;
+}
+
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+
 @media (max-width: 900px) {
     .lista-produtos {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    main {
+    main:not(.conteudo-home) {
         padding: 20px;
     }
 }
 
-/* Celulares */
 @media (max-width: 600px) {
-    .lista-produtos {
-        grid-template-columns: 1fr;
-    }
-
-    header {
+    .header-home {
+        flex-direction: column;
         padding: 20px;
     }
 
-    header h1 {
+    .header-pagina {
+        padding: 20px;
+    }
+
+    .header-pagina h1 {
         font-size: 24px;
     }
 
-    main {
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .conteudo-home {
+        padding: 20px 15px;
+    }
+
+    .banner-home {
+        padding: 35px 20px;
+    }
+
+    .banner-home h1 {
+        font-size: 28px;
+    }
+
+    .grid-categorias,
+    .lista-produtos,
+    .detalhes-produto {
+        grid-template-columns: 1fr;
+    }
+
+    main:not(.conteudo-home) {
         padding: 15px;
+    }
+
+    .card-categoria img {
+        height: 200px;
+    }
+
+    .detalhes-produto {
+        gap: 20px;
     }
 }
