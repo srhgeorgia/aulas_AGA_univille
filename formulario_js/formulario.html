@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Notas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header-pagina">
+        <div class="btnhome-style">
+            <a href="home.html" class="btn-home">← Home</a>
+        </div>
+        <h1>Cálculo de Média de Alunos</h1>
+    </header>
+
+    <main class="conteiner-formulario">
+        <h2 id="nome-exibicao">Digite as notas:</h2>
+
+        <form id="form-media">
+            <div class="campo-input">
+                <label for="nota1">Nota 1:</label>
+                <input type="number" id="nota1" min="0" max="10" step="0.1" placeholder="Ex: 7.5" required>
+            </div>
+
+            <div class="campo-input">
+                <label for="nota2">Nota 2:</label>
+                <input type="number" id="nota2" min="0" max="10" step="0.1" placeholder="Ex: 8.0" required>
+            </div>
+
+            <button type="button" onclick="calcularMedia()">Calcular Média</button>
+        </form>
+
+        <div id="resultado" class="resultado"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

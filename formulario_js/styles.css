@@ -1,0 +1,148 @@
+/* RESET BASICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    margin-bottom: 15px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    
+    /* USANDO CSS FLEXBOX */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;     
+    min-height: 100vh;      
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.btn-home {
+    text-decoration: none;  
+    color: #0066cc; 
+    font-weight: bold;
+}
+
+.btnhome-style {
+    margin-bottom: 15px;
+}
+
+.conteiner-formulario, .banner-home {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px; /* LIMITANDO O TAMANHO DO MODAL */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.campo-input {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.campo-input label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.campo-input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Botões */
+.btn-destaque, button {
+    display: inline-block;
+    width: 100%; /* TESTAR PARA VER SE OCUPA A TELA TODA */
+    padding: 12px;
+    background-color: #0066cc;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+button:hover, .btn-destaque:hover {
+    background-color: #004b99;
+}
+
+/* --- ESTILOS DO MODAL --- */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-overlay.ativo {
+    display: flex;
+}
+
+.modal-conteudo {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 380px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.btn-fechar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+}
+
+.btn-fechar:hover {
+    color: #000;
+}
+
+.resultado {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+/* STATUS NO JS */
+.aprovado {
+    color: #2e7d32;
+}
+
+.reprovado {
+    color: #c62828;
+}
